@@ -22,4 +22,9 @@ readonly class Username implements ValueObject
             throw new ValueObjectValidationException();
         }
     }
+
+    public function getValue(): string
+    {
+        return $this->value;
+    }
 }
