@@ -11,11 +11,11 @@ readonly class GenerateRandomUserServiceResponse implements \JsonSerializable
     ) {
     }
 
-
     public function jsonSerialize(): array
     {
         return [
             'name' => $this->user->getName()->getValue(),
+            'gender' => $this->user->getName()->getGender()->getValue(),
             'username' => $this->user->getUsername()->getValue(),
         ];
     }
